@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="dog"
+            type="com.example.lab_05_ver2.model.DogBreed" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.DetailsFragment">
+
+        <ImageView
+            android:id="@+id/iv_name"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:layout_marginTop="20dp"
+            android:url="@{dog.url}" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@{dog.name}"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_label_breed_for"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Breed for:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_breed_for"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@{dog.bredFor}"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_label_breed_group"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Breed Group:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_breed_group"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@{dog.breedGroup}"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_label_life_span"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Life Span:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_life_span"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@{dog.lifeSpan}"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_label_origin"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Origin:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_origin"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@{dog.origin}"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_label_temperament"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Temperament:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_temperament"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@{dog.temperament}"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_label_height"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Height:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@{dog.height.metric}"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_label_weight"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Weight:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@{dog.weight.metric}"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
