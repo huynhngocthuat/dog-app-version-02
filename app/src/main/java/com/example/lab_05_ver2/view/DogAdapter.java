@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +19,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class DogAdapter extends RecyclerView.Adapter<DogAdapter.ViewHolder> {
+public class DogAdapter extends RecyclerView.Adapter<DogAdapter.ViewHolder> implements Filterable {
 
     private ArrayList<DogBreed> dogs;
     private ArrayList<DogBreed> dogsOld;
@@ -60,6 +61,36 @@ public class DogAdapter extends RecyclerView.Adapter<DogAdapter.ViewHolder> {
             return dogs.size();
         }
         return 0;
+    }
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String strSearch = charSequence.toString();
+                if(strSearch.isEmpty()){
+                    dogs = dogsOld;
+                }else {
+                    ArrayList<DogBreed> list = new ArrayList<DogBreed>();
+                    for(DogBreed dogBreed : dogsOld){
+                        if(dogBreed.getName().toLowerCase().contains(strSearch.toLowerCase())){
+                            list.add(dogBreed);
+                        }
+                    }
+                    dogs = list;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = dogs;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                dogs = (ArrayList<DogBreed>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
     }
 
 

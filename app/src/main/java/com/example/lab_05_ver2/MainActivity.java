@@ -40,27 +40,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.search_menu, menu);
-//        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-//        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
-//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-//        searchView.setMaxWidth(Integer.MAX_VALUE);
-//
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                ListAdapter.class.ontactAdapter.getFilter().filter(query);
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                contactAdapter.getFilter().filter(newText);
-//                return false;
-//            }
-//        });
-//        return true;
-//    }
 }
